@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leistungen - Kiral Bau GmbH</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <a href="index.html"><img src="kirallogo.png" alt="Kiral Bau Logo" class="logo"></a>
+            </div>
+            <nav>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                    <li><a href="services.html">Leistungen</a></li>
+                    <li><a href="references.html">Referenzen</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <image class="hero-video desktop-video" src="tel.png" autoplay muted playsinline></video>
+        <image class="hero-video mobile-video" src="tel2.png" autoplay muted playsinline></video>
+    </section>
+
+            <!-- Neue Kontaktbox -->
+            <div class="contact-card">
+                <h2>Kontaktinformationen</h2>
+                <p><strong>Adresse:</strong> Kiral Bau GmbH, Berlin, Deutschland</p>
+                <p><strong>Telefon:</strong>+49 176 30140780</p>
+                <p><strong>E-Mail:</strong> kiralbau@hotmail.com</p>
+                <p><strong>Öffnungszeiten:</strong> Montag - Freitag: 09:00 - 18:00 Uhr</p>
+            </div>
+
+        <!-- Kontakt Section -->
+        <section id="kontakt" class="contact-section">
+            <div class="contact-container">
+                <div class="contact-form-box">
+                    <h2>Kontaktieren Sie uns</h2>
+                    <p>Haben Sie Fragen oder möchten Sie ein Angebot? Schreiben Sie uns eine Nachricht.</p>
+                    <form action="send_mail.php" method="post">
+                        <input type="text" name="name" placeholder="Ihr Name" required>
+                        <input type="email" name="email" placeholder="Ihre E-Mail" required>
+                        <input type="tel" name="phone" placeholder="Ihre Telefonnummer" required>
+                        <textarea name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
+                        <button type="submit">Nachricht senden</button>
+                    </form>
+                </div>
+                <div class="contact-details">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2426.071799925675!2d13.355953840640593!3d52.550226134108016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a855c0f859f433%3A0xd77996040aa323ca!2sKiral%20Bau%20GmbH!5e0!3m2!1sde!2sde!4v1728980069997!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Footer -->
+        <footer>
+            <img src="kirallogo.png" alt="Kiral Bau Logo" class="logo">
+            <p>&copy; 2024 Kiral Bau GmbH. Alle Rechte vorbehalten.</p>
+            <div class="footer-links">
+                <a href="#">Datenschutz</a>
+                <a href="#">Impressum</a>
+            </div>
+        </footer>
+    
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const desktopVideo = document.querySelector(".desktop-video");
+                const mobileVideo = document.querySelector(".mobile-video");
+                const hamburger = document.querySelector(".hamburger");
+                const menu = document.querySelector(".menu");
+    
+                function handleResize() {
+                    if (window.innerWidth <= 768) {
+                        desktopVideo.style.display = "none";
+                        mobileVideo.style.display = "block";
+                    } else {
+                        desktopVideo.style.display = "block";
+                        mobileVideo.style.display = "none";
+                    }
+                }
+    
+                function toggleMenu() {
+                    menu.classList.toggle("open");
+                }
+    
+                handleResize();
+                window.addEventListener("resize", handleResize);
+                hamburger.addEventListener("click", toggleMenu);
+            });
+        </script>
+    </body>
+    
+    </html>
