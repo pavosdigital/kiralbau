@@ -142,9 +142,15 @@ a:hover {
     padding: 20px;
 }
 
+/* Mobile Anpassungen für mehr Abstand nach unten */
 @media (max-width: 768px) {
     .hero {
-        padding-top: 75%;
+        padding-top: 100%; /* Erhöht das Verhältnis für mobile Geräte */
+        margin-bottom: 30px; /* Fügt zusätzlichen Abstand unten hinzu, um die Section weiter nach unten zu schieben */
+    }
+
+    .hero-content {
+        top: 100%; /* Verschiebt den Inhalt etwas weiter nach unten in der Hero-Section */
     }
 }
 
